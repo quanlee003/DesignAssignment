@@ -1,0 +1,312 @@
+@media all and (max-width: 1788px) {
+    .menubar {
+        &-inner {
+            .nav {
+                display: none;
+            }
+            .form-control {
+                display: flex;
+            }
+            &-btn {
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                .nav-icon {
+                    display: block;
+                    font-size: 18px;
+                }
+                i {
+                    font-size: 18px;
+                    &:first-child {
+                        display: inline-block;
+                        margin-right: 10px;
+                        margin-left: 5px;
+                    }
+                    &:last-child {
+                        margin-left: 10px;
+                        vertical-align: bottom;
+                    }
+                }
+                .subnav {
+                    &-title {
+                        display: block;
+                        text-align: center;
+                    }
+                    &-item {
+                        display: block;
+                        margin: 0;
+                        padding: 15px;
+                        border-bottom: 1px solid #dddddd ;
+                        a {
+                            font-weight: 600;
+                            color: @main-color;
+                        }
+                    }
+                }
+                .active {
+                    .transform(translateX(0));
+                    .transit(all, .5s);
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 1170px) {
+    .footer {
+        .line {
+            bottom: 70px;
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    .menubar {
+        &-inner {
+            &-btn {
+                .nav-icon {
+                    font-size: 14px;
+                }
+            }
+            &-logo {
+                button {
+                    font-size: 16px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 0.6em;
+                    width: 140px;
+                }
+            }
+        }
+    }
+    .blog {
+        &-body {
+            .slide {
+                .blog-body-item {
+                    &-inner {
+                        .item-content {
+                            .main-content {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        height: auto;
+        &-item {
+            &-inner {
+                .footer-about {
+                    width: 100%;
+                }
+                .footer-navigation {
+                    width: 100%;
+                }
+                .footer-location {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .cpright {
+        padding-bottom: 10px;
+    }
+}
+@media all and (max-width: 768px) {
+    .header-logo {
+        display: block;
+    }
+    .header {
+        height: auto;
+        letter-spacing: -0.06em;
+        &-title {
+            margin-left: 0;
+        }
+        &-btn {
+            display: block;
+            .setting {
+                margin-right: 10px;
+            }
+            .login {
+                margin-right: 13px;
+            }
+        }
+    }
+    .menubar {
+        &-inner {
+            margin: 0;
+            &-logo {
+                display: none;
+            }
+            .form-control {
+                width: 60%;
+                margin-left: 0;
+                button {
+                    width: 30%;
+                }
+            }
+        }
+    }
+    .ads {
+        .title {
+            font-size: 30px;
+        }
+        span {
+            font-size: 36px;
+        }
+        &-left {
+            width: 100%;
+            &-inner {
+                &-detail {
+                    .ads-content {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        &-right {
+            width: 100%;
+        }
+    }
+    .products {
+        &-wrap {
+            &-item {
+                    .item-pic {
+                        button {
+                            position: initial;
+                            font-size: 12px;
+                            width: 100%;
+                            border-bottom: 1px solid @title-color;
+                            height: 40px;
+                        }
+                    }
+            }
+        }
+    }
+    .blog {
+        height: auto;
+        &-header {
+            .title {
+                font-size: 18px;
+            }
+        }
+        .line {
+            margin-top: 100px;
+        }
+        &-body {
+            .slide {
+                .row {
+                    display: initial;
+                }
+                .blog-body-item {
+                    width: 100%;
+                    margin: 200px 0;
+                }
+            }
+        }
+    }
+    .footer {
+        .line {
+            display: none;
+        }
+        &-item {
+            &-inner {
+                display: initial;
+            }
+        }
+    }
+}
+@media all and (max-width: 576px) {
+    .header {
+        &-title {
+            font-size: 12px;
+        }
+        &-btn {
+            font-size: 12px;
+        }
+    }
+    .menubar {
+        &-inner {
+            .form-control {
+                width: 50%;
+                input {
+                    margin-left: 15px;
+                    font-size: 12px;
+                }
+                button {
+                    width: 40%;
+                }
+            }
+            &-btn {
+                .nav-icon {
+                    font-size: 12px;
+                }
+                .subnav-title {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .ads {
+        .title {
+            font-size: 20px;
+        }
+        span {
+            font-size: 24px;
+        }
+        &-left {
+            width: 100%;
+            &-inner {
+                &-detail {
+                    .ads-content {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        &-right {
+            width: 100%;
+        }
+    }
+    .products {
+        width: 100%;
+        .row {
+            display: initial;
+            .products-wrap {
+                display: initial;
+                &-item {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .blog {
+        &-body {
+            .slide {
+                .blog-body-item {
+                    margin: 150px 0 -90px;
+                }
+            }
+        }
+    }
+    .footer {
+        .cpright {
+            display: initial;
+            &-title {
+                margin-bottom: 10px;
+            }
+            &-pic {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+@media all and (max-width: 375px) {
+    .header-logo {
+        button {
+            font-size: 24px;
+            height: 48px;
+        }
+    }
+}

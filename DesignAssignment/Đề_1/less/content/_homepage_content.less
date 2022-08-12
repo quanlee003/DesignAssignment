@@ -1,0 +1,361 @@
+.ads {
+    font-family: "Montserrat";
+    .ads-col {
+        margin: -15px 0;
+    }
+    span {
+        display: block;
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 0;
+        color: #000;
+    }
+    .title {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: @title-color;
+        margin-top: 10px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    button {
+        font-family: "Montserrat";
+        font-size: 14px;
+        background-color: @main-color;
+        color: @text-white-color;
+        text-align: center;
+        border: none;
+        height: 40px;
+        width: 106px;
+        margin-top: 4px;
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+            .transit(all, .5s);
+        }
+    }
+    margin-top: 15px;
+    &-left {
+        .col(66.6666667%);
+        &-inner {
+            position: relative;
+            overflow: hidden;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                &:hover {
+                    cursor: pointer;
+                    .transform(scale(1.05));
+                    .transit(all, .5s);
+                }
+            }
+            &-detail {
+                position: absolute;
+
+                top: 55%;
+                right: 12.5%;
+                .ads-content {
+                    font-family: "Pacifico";
+                    font-weight: 600;
+                    font-size: 30px;
+                }
+                .ads-btn {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    &-right {
+        .col(33.333333333%);
+        img {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            &:hover {
+                cursor: pointer;
+                .transform(scale(1.05));
+                .transit(all, .5s);
+            }
+        }
+        &-item {
+            &-inner {
+                position: relative;
+                .ads-right-content {
+                    position: absolute;
+                    top: 50%;
+                    .transform(translateY(-50%));
+                }
+                .content-top {
+                    top: 52%;
+                    .transform(translateY(-50%));
+                    left: 15.5%;
+                }
+                .content-bottom {
+                    left: 11%;
+                }
+            }
+        }
+    }
+}
+.products {
+    font-family: "Montserrat";
+    &-header {
+        margin-top: 46px;
+        &-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: @main-color;
+            letter-spacing: 0.5em;
+        }
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 24px;
+            letter-spacing: 0.1em;
+        }
+        .line {
+            background-color: @main-color;
+            width: 50px;
+            height: 1px;
+            margin-bottom: 35px;
+        }
+    }
+    &-wrap {
+        display: flex;
+        &-item {
+            .col(25%);
+            .item-pic {
+                position: relative;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    &:hover {
+                        cursor: pointer;
+                        .transform(scale(1.03));
+                        .transit(all, .5s);
+                    }
+                }
+                button {
+                    position: absolute;
+                    font-size: 13px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: @text-white-color;
+                    border: none;
+                    bottom: 5px;
+                    left: 5px;
+                    height: 40px;
+                    width: 118px;
+                    &:hover {
+                        cursor: pointer;
+                        color: @main-color;
+                        .transit(all, .5s);
+                    }
+                }
+            }
+            .content {
+                font-size: 14px;
+                text-align: left;
+                font-weight: 700;
+                span {
+                    color: @title-color;
+                    text-decoration: line-through;
+                }
+                .product-name {
+                    letter-spacing: -0.02em;
+                    margin-top: 16px;
+                }
+                i {
+                    font-size: 11px;
+                    margin-top: 11px;
+                    letter-spacing: -0.2em;
+                    color: @common-color;
+                    &:hover {
+                        cursor: pointer;
+                        color: #FFC23C;
+                        .transform(scale(1.1));
+                        .transit(all, .5s);
+                    }
+                    &.active {
+                        color: @star;
+                    }
+                }
+                .product-price {
+                    color: @main-color;
+                    margin-top: 7px;
+                    margin-bottom: 17px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+.blog {
+    font-family: "Montserrat";
+    position: relative;
+    background-image: url(../img/bg_blog.jpg);
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 708px;
+    margin-top: 45px;
+    &-header {
+        position: absolute;
+        left: 50%;
+        .transform(translateX(-50%));
+        text-align: center;
+        .status {
+            margin-top: 77px;
+            text-transform: uppercase;
+            color: @main-color;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5em;
+        }
+        .title {
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 11px;
+            letter-spacing: 0.1em;
+        }
+    }
+    .line {
+        position: absolute;
+        left: 50%;
+        .transform(translateX(-50%));
+        background-color: @main-color;
+        width: 50px;
+        height: 1px;
+        margin-top: 155px;
+    }
+    &-body {
+        .slide {
+            display: none;
+            &.active {
+                display: initial;
+                animation: show ease 1s;
+            }
+            .blog-body-item {
+                .col(33.3333333%);
+                margin: 206px 0 15px;
+                
+                &-inner {
+                    background-color: @text-white-color;
+                    height: 390px;
+                    .item-pic {
+                        position: relative;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                        .date-box {
+                            position: absolute;
+                            display: block;
+                            background-color: #87d5db;
+                            border: 5px solid #87d5db;
+                            top: 22px;
+                            left: 20px;
+                            &-inner {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                color: @text-white-color;
+                                width: 50px;
+                                height: 50px;
+                                font-size: 14px;
+                                font-weight: 600;
+                                text-align: center;
+                                border: 1px solid @text-white-color;
+                                span {
+                                    width: 100%;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                    .item-content {
+                        margin-top: 17px;
+                        margin-left: 17px;
+                        &-title {
+                            font-size: 16px;
+                            font-weight: 600;
+                            letter-spacing: -0.01em;
+                            &:hover {
+                                cursor: pointer;
+                                color: @main-color;
+                                .transit(all, .5s);
+                            }
+                        }
+                        .main-content {
+                            font-family: "Open Sans";
+                            color: @title-color;
+                            font-size: 14px;
+                            margin-top: 18px;
+                            width: 310px;
+                            letter-spacing: 0.03em;
+                            line-height: 1.5;
+                        }
+                        .reaction {
+                            margin-left: -17px;
+                            margin-top: 18px;
+                            border-top: 1px solid #ddd;
+                            height: 55px;
+                            i {
+                                color: @common-color;
+                                font-size: 14px;
+                                display: inline-block;
+                                line-height: 55px;
+                                margin-left: 20px;
+                                margin-right: 7px;
+                                letter-spacing: 0.15em;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: @main-color;
+                                    .transform(scale(1.2));
+                                    .transit(all, .5s);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    &-footer {
+        text-align: center;
+        .slide-btn {
+            display: inline-block;
+            margin-top: 10px;
+            i {
+                margin: 5px;
+                font-size: 10px;
+                color: @main-color;
+                opacity: .7;
+                &:hover {
+                    cursor: pointer;
+                    opacity: 1;
+                    .transform(scale(1.3));
+                    .transit(all, .5s);
+                }
+                &.active {
+                    opacity: 1;
+                    .transform(scale(1.3));
+                }
+            }
+        }
+    }
+}

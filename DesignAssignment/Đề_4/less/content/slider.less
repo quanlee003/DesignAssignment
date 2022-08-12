@@ -1,0 +1,54 @@
+.slider {
+    background-image: url('../img/slider.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 950px;
+    margin-top: -100px;
+    z-index: -1;
+    &-inner {
+        position: relative;
+        height: 950px;
+        z-index: 100;
+        .title {
+            position: absolute;
+            top:32.5%;
+            color: @text-white-color;
+            font-size: 60px;
+            font-weight: 600;
+            left: -0.2%;
+            line-height: 1;
+            span {
+                font-size: 40px;
+            }
+        }
+        .description {
+            position: absolute;
+            top: 48%;
+            color: @text-white-color;
+            width: 45%;
+            font-size: 15px;
+            line-height: 1.6;
+            left: 0;
+            letter-spacing: -0.04em;
+        }
+        button {
+            position: absolute;
+            display: block;
+            top: 61.3%;
+            left: 0;
+            width: 171px;
+            height: 50px;
+            border: 1px solid @text-white-color;
+            background-color: rgba(0,0,0,0);
+            color: @text-white-color;
+            text-transform: uppercase;
+            &:hover {
+                cursor: pointer;
+                color: @main-color;
+                border-color: @main-color;
+                .transit(all, .5s);
+            }
+        }
+    }
+}

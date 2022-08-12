@@ -1,0 +1,292 @@
+@media all and (max-width: 1780px) {
+    .content {
+        &-featured {
+            &-item {
+                .top {
+                    .featured-item {
+                        .item-content {
+                            line-height: 1.2;
+                            .description {
+                                font-size: 20px;
+                            }
+                            .custom {
+                                position: initial;
+                                width: 100%;
+                                font-size: 12px;
+                            }
+                            span {
+                                font-size: 30px;
+                            }
+                            .box {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .bottom {
+                    .featured-item {
+                        .item-content {
+                            line-height: 1.2;
+                            .description {
+                                font-size: 20px;
+                                width: auto;
+                            }
+                            .title {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 1170px) {
+    .header {
+        &-content {
+            .title {
+                font-size: 60px;
+                width: 70%;
+            }
+        }
+        &-refer {
+            font-size: 20px;
+        }
+    }
+    .content {
+        &-intro {
+            .content-item {
+                .col(33.33333%);
+                border-right: none;
+                &.center {
+                    .col(33.33333%);
+                    border-left: 1px solid @summary;
+                    border-right: 1px solid @summary; 
+                }
+                &.blank {
+                    .col(0);
+                    padding: 0;
+                }
+            }
+        }
+        &-featured {
+            &-products {
+                .featured-heading {
+                    padding: 0 15px;
+                }
+                .featured-body {
+                    .featured-products {
+                        margin: 0 -15px;
+                        .item-info {
+                            img {
+                                display: block;
+                                width: 100%;
+                            }
+                            .picture-info {
+                                .prev-arrow {
+                                    top: 34%;
+                                    i {
+                                        display: initial;
+                                    }
+                                }
+                                .info-btn {
+                                    position: initial;
+                                    display: flex;
+                                    width: 100%;
+                                    button {
+                                        display: initial;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog {
+        &-body {
+            margin: 0;
+        }
+    }
+    .brand {
+        height: auto;
+        &-pic {
+            padding-bottom: 50px;
+        }
+    }
+    .footer {
+        &-top {
+            padding: 0 15px;
+            .navbar-footer {
+                width: auto;
+            }
+        }
+        &-bottom {
+            padding: 0 15px;
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    .content {
+        &-featured {
+            &-item {
+                .top {
+                    display: block;
+                    .featured-item {
+                        img {
+                            padding: 15px 25px;
+                        }
+                    }
+                }
+                .bottom {
+                    display: block;
+                    .featured-item {
+                        img {
+                            padding: 15px 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        height: auto;
+        &-top {
+            display: block;
+            height: auto;
+            padding: 30px 0;
+            text-align: center;
+            .navbar-footer {
+                justify-content: space-around;
+            }
+            .subscribe {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+@media all and (max-width: 768px) {
+    .content {
+        &-intro {
+            .content-item {
+                height: auto;
+                &-inner {
+                    .title {
+                        font-size: 13px;
+                    }
+                    .description {
+                        font-size: 12px;
+                        margin-bottom: 6%;
+                    }
+                }
+            }
+        }
+        &-featured {
+            &-products {
+                .featured-heading {
+                    padding: 0 15px;
+                }
+                .featured-body {
+                    .featured-products {
+                        display: block;
+                        margin: 0 -15px;
+                        .item-info {
+                            width: 80%;
+                            img {
+                                display: block;
+                                text-align: center;
+                                width: 100%;
+                            }
+                            .picture-info {
+                                margin-left: 15%;
+                                .prev-arrow {
+                                    top: 34%;
+                                    i {
+                                        display: initial;
+                                    }
+                                }
+                                .info-btn {
+                                    position: initial;
+                                    display: flex;
+                                    width: 100%;
+                                    button {
+                                        display: initial;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        &-bottom {
+            display: initial;
+            .social-media {
+                display: flex;
+                justify-content: space-around;
+                button {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 576px) {
+    .header {
+        &-refer {
+            top: 130%;
+            right: 50%;
+            .transform(translateX(50%));
+            text-align: center;
+            ul {
+                li {
+                    &:hover {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        .main-title {
+            .intro-title {
+                font-size: 24px;
+            }
+        }
+        &-featured {
+            &-products {
+                .featured-heading {
+                    display: block;
+                }
+            }
+        }
+    }
+    .blog {
+        height: 900px;
+        &-body {
+            .blog-body-item {
+                &-inner {
+                    height: 600px;
+                }
+            }
+        }
+    }
+    .footer {
+       &-top {
+        .navbar-footer {
+            display: none;
+        }
+       } 
+    }
+}
+@media all and (max-width: 375px) {
+
+}

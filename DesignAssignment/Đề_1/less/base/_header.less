@@ -1,0 +1,179 @@
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    opacity: 0;
+    z-index: -1;
+}
+.cover.active {
+    opacity: 0.9;
+    z-index: 100;
+    .transit(all,.5s);
+}
+.header-logo {
+    display: none;
+    text-align: center;
+    button {
+        font-family: "Pacifico";
+        background-color: @text-white-color;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: 0.7em;
+        height: 60px;
+        border: none;
+    }
+}
+.header {
+    font-family: 'Montserrat';
+    height: 46px;
+    background-color: @bg-top-menu;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: @title-color;
+    letter-spacing: -0.04em;
+    a {
+        color: @title-color;
+    }
+    &-title {
+        .col(50%);
+        font-size: 14px;
+        margin-left: 15px;
+    }
+    &-btn {
+        display: flex;
+        justify-content: space-around;
+        font-size: 14px;
+        .setting {
+            margin-right: 30px;
+        }
+        .login {
+            margin-right: 28px;
+        }
+    }
+    i {
+        display: inline-block;
+        width: 10px;
+        margin-right: 6px;
+        &:hover {
+            .transform(scale(1.1));
+            .transit(all, .5s);
+            cursor: pointer;
+        }
+    }    
+}
+.menubar {
+    font-family: 'Montserrat';
+    border-bottom: 1px solid @title-color;
+    &-inner {
+        height: 79px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 15px;
+        &-logo {
+            button {
+                background-color: @text-white-color;
+                font-size: 20px;
+                font-weight: 800;
+                text-align: right;
+                text-transform: uppercase;
+                letter-spacing: 0.7em;
+                width: 200px;
+                height: 40px;
+                border: 2px solid #000;
+                &:hover {
+                    background-color: @main-color;
+                    color: @text-white-color;
+                    .transit(all, .5s);
+                    cursor: pointer;
+                }
+            }
+        }
+        .nav {
+            .col(53%);
+            text-align: justify;
+            &-item {
+                display: inline-block;
+                margin-right: 51px;
+                a {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 800;
+                    &:hover {
+                        color: @main-color;
+                        .transit(all, .5s);
+                    }
+                }
+            }
+        }
+        .form-control {
+            display: none;
+            align-items: center;
+            background-color: @text-white-color;
+            width: 50%;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid #000;
+            overflow: hidden;
+            input {
+                width: 100%;
+                border: none;
+                margin-left: 30px;
+            }
+            button {
+                width: 20%;
+                height: 50px;
+                border-radius: 50px;
+                font-size: 16px;
+                color: @text-white-color;
+                background-color: @main-color;
+                vertical-align: middle;
+                border: 6px solid @text-white-color;
+            }
+        }
+        &-btn {
+            .nav-icon {
+                display: none;
+            }
+            .subnav {
+                .transform(translateX(110%));
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 40vw;
+                z-index: 999;
+                .transit(all, .5s);
+                background-color: @text-white-color;
+                -webkit-box-shadow: -8px -7px 6px -2px rgba(187, 187, 187, 1);
+                -moz-box-shadow: -8px -7px 6px -2px rgba(187, 187, 187, 1);
+                box-shadow: -8px -7px 6px -2px rgba(187, 187, 187, 1);
+                &-title {
+                    display: none;
+                    background-color: @bg-top-menu;
+                    color: @text-white-color;
+                    font-family: "Pacifico";
+                    font-weight: 600;
+                    line-height: 46px;
+                    font-size: 24px;
+                }
+            }
+            i {
+                font-size: 23px;
+                vertical-align: middle;
+                &:last-child {
+                    margin-left: 30px;
+                }
+                &:hover {
+                    color: @main-color;
+                    .transit(all, .5s);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

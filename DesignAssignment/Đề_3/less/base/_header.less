@@ -1,0 +1,172 @@
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    opacity: 0;
+    z-index: -1;
+}
+.cover.active {
+    opacity: 0.9;
+    z-index: 100;
+    .transit(all ,.5s);
+}
+.header {
+    font-family: "Cormorant";
+    width: 100%;
+    height: 1000px;
+    background-image: url('../img/slider.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -100;
+    .menubar {
+        width: 100%;
+        &-inner {
+            height: 110px;
+            justify-content: space-between;
+            align-items: center;
+            .icon {
+                display: flex;
+                color: @text-white-color;
+                i {
+                    font-size: 20px;
+                    margin-right: 12px;
+                    margin-left: 38px;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: .7;
+                        .transit(all, .5s);
+                    }
+                    }
+                }
+                .cart {
+                    position: relative;
+                    &::after {
+                        font-family: "Fira Sans";
+                        content: attr(data);
+                        font-size: 12px;
+                        color: @text-white-color;
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        text-align: center;
+                        border-radius: 18px;
+                        background-color: @common-color;
+                        position: absolute;
+                        top: -7px;
+                        right: 2px;
+                }
+            }
+        }
+        .navbar {
+            .transform(translateX(110%));
+            background-color: @text-white-color;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 30vw;
+            z-index: 999;
+            box-shadow: -8px -7px 6px -2px #bbbbbb;
+            .nav-title {
+                font-family: 'Pacifico';
+                text-transform: uppercase;
+                font-size: 40px;
+                background-color: @main-color;
+                color: @text-white-color;
+                text-align: center;
+                padding: 0 15px;
+            }
+            .nav-item {
+                padding: 30px;
+                font-size: 20px;
+                border-bottom: 1px solid @white-color-blur;
+                a {
+                    color: @main-color;
+                }
+            }
+        }
+        .active {
+            .transform(translateX(0));
+            .transit(all,.5s);
+        }
+    }
+    &-content {
+        position: absolute;
+        top: 51.5%;
+        left: 19.5%;
+        .time {
+            font-family: "Fira Sans";
+            font-size: 24px;
+            color: @common-color;
+            letter-spacing: 0.51em;
+        }
+        .title {
+            font-size: 100px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-style: italic;
+            color: #333333;
+            margin-top: 36px;
+            width: 800px;
+            letter-spacing: 0.24em;
+            line-height: 1;
+        }
+        button {
+            display: block;
+            font-family: 'Fira Sans';
+            font-size: 16px;
+            text-transform: uppercase;
+            color: @text-white-color;
+            background-color: @common-color;
+            border: none;
+            margin-top: 55px;
+            height: 48px;
+            width: 197px;
+            letter-spacing: 0.15em;
+            &:hover {
+                cursor: pointer;
+                color: @main-color;
+                .transit(all,.5s);
+            }
+        }
+    }
+    &-refer {
+        position: absolute;
+        font-size: 26px;
+        text-align: right;
+        top: 63.7%;
+        right: 5.2%;
+        letter-spacing: 0.06em;
+        line-height: 1.5;
+        box-sizing: border-box;
+        ul {
+            box-sizing: border-box;
+            li {
+                a {
+                    color: @white-color-blur;
+                    &:hover {
+                        cursor: pointer;
+                        color: @text-white-color;
+                        .transit(all, .5s);
+                        &::after {
+                            display: inline-block;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        display: none;
+                        background-color: @common-color;
+                        width: 80px;
+                        height: 1px;
+                        vertical-align: middle;
+                        margin-left: 20px;
+                        margin-right: -100px;
+                        animation: show 1.5s;
+                    }
+                }
+            }
+        }
+    }
+}

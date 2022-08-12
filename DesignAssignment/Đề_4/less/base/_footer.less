@@ -1,0 +1,78 @@
+.footer {
+    background-color: @footer-bg;
+    height: 670px;
+    &-header {
+        text-align: center;
+        color: @footer-title;
+        img {
+            margin-top: 100px;
+        }
+        .title {
+            margin-top: 26px;
+            padding: 0 210px;
+            letter-spacing: -0.07em;
+        }
+        &-icon {
+            margin-top: 36px;
+            font-size: 19px;
+            padding-bottom: 51px;
+            border-bottom: 1px solid @footer-title;
+            a {
+                color: @footer-title;
+                padding: 0 20px;
+                &:first-child {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+    &-content {
+        &-item {
+            margin-top: 58px;
+            .item {
+                .col(25%);
+                .title {
+                    color: @text-white-color;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    font-weight: 600;
+                    letter-spacing: 0.04em;
+                }
+                .description {
+                    margin-top: 17px;
+                    line-height: 2.9;
+                    font-size: 14px;
+                    a {
+                        color: @footer-title;
+                        &:hover {
+                            cursor: pointer;
+                            color: @main-color;
+                            .transit(all, .5s);
+                        }
+                        i {
+                            padding-right: 10px;
+                            &.location {
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.cpright {
+    background-color: #111;
+    z-index: 10;
+    text-align: center;
+    color: @footer-title;
+    margin-top: -1px;
+    .title {
+        font-size: 14px;
+        padding: 15px 0;
+        letter-spacing: -0.01em;
+        i {
+            font-size: 12px;
+        }
+    }
+}

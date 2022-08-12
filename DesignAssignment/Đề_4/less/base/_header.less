@@ -1,0 +1,94 @@
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    opacity: 0;
+    z-index: -1;
+}
+.cover.active {
+    opacity: 0.9;
+    z-index: 100;
+    .transit(all ,.5s);
+}
+.header {
+    background-color: @bg-header;
+    opacity: 0.8;
+    &-title {
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        overflow: hidden;
+        .navbar {
+            display: flex;
+            margin-top: 5px;
+            width: 52.6%;
+            .nav-item {
+                padding-right: 52px;
+                a {
+                    color: @text-white-color;
+                    &:hover {
+                        cursor: pointer;
+                        color: @main-color;
+                        .transit(all, .5s);
+                    }
+                }
+            }
+        }
+        .icon {
+            color: @text-white-color;
+            margin-top: 5px;
+            i {
+                border-right: 1px solid @summary;
+                padding-left: 23px;
+                padding-right: 25px;
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    border: none;
+                    padding-right: 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                    color: @main-color;
+                    .transit(all, .5s);
+                }
+            }
+        }
+    }
+    .navbar-btn {
+        .subnav {
+            .transform(translateX(110%));
+            background-color: @text-white-color;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 36vw;
+            z-index: 999;
+            box-shadow: -8px -7px 6px -2px #bbbbbb;
+            .nav-title {
+                font-family: 'Pacifico';
+                text-transform: uppercase;
+                font-size: 36px;
+                background-color: @main-color;
+                color: @text-white-color;
+                text-align: center;
+                padding: 0 15px;
+            }
+            .subnav-item {
+                padding: 20px 30px;
+                font-size: 20px;
+                border-bottom: 1px solid @summary;
+                a {
+                    color: @main-color;
+                }
+            }
+        }
+        .active {
+            .transform(translateX(0));
+            .transit(all,.5s);
+        }
+    }
+}

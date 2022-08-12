@@ -1,0 +1,433 @@
+.content {
+    &-intro {
+        .content-item {
+            margin: 0 !important;
+            padding: 0 16px;
+            height: 80px;
+            // line-height: 65px;
+            text-align: center;
+            border-bottom: 1px solid @summary;
+            border-right: 1px solid @summary;
+            .col(20%);
+            &.center {
+                .col(21%);
+            }
+            &.blank {
+                .col(19.5%);
+            }
+            &:last-child {
+                border-right: none;
+            }
+            &-inner {
+                margin-top: 6%;
+                .title {
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                }
+                .description {
+                    font-family: "Fira Sans";
+                    font-size: 14px;
+                    color: @summary;
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+    .main-title {
+        position: relative;
+        max-width: 800px;
+        width: 100%;
+        padding: 0 15px;
+        margin: auto;
+        height: 330px;
+        box-sizing: border-box;
+        .intro-title {
+            position: absolute;
+            top: 20%;
+            right: 0;
+            .transform(translateY(50%));
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.02em;
+            line-height: 1.5;
+        }
+    }
+    &-featured {
+        &-item {
+            .top {
+                display: flex;
+                margin: 0 -40px;
+                .featured-item {
+                    position: relative;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    img {
+                        padding: 0 25px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        &:hover {
+                            cursor: pointer;
+                            .transform(scale(1.1));
+                            .transit(all ,.5s);
+                        }
+                    }
+                    .item-content {
+                        position: absolute;
+                        text-align: center;
+                        left: 50%;
+                        .transform(translateX(-50%));
+                        bottom: 5.6%;
+                        letter-spacing: 0.07em;
+                        line-height: 2;
+                        .description {
+                            font-family: "Fira Sans";
+                            font-size: 24px;
+                        }
+                        .price {
+                            color: @main-color;
+                            font-size: 24px;
+                            text-transform: uppercase;
+                        }
+                        .custom {
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            position: absolute;
+                            text-align: left;
+                            line-height: 1.6;
+                            width: 300px;
+                            bottom: 22px;
+                            left: -147px;
+                            letter-spacing: 0.15em;
+                        }
+                        span {
+                            font-family: "Cormorant";
+                            text-transform: initial;
+                            font-size: 72px;
+                            width: 100%;
+                            font-weight: bold;
+                            color: @main-color;
+                        }
+                        .box {
+                            position: absolute;
+                            width: 270px;
+                            height: 330px;
+                            font-weight: bold;
+                            border: 5px solid @text-white-color;
+                            left: 99px;
+                            bottom: 68px;
+                            &-title {
+                                font-size: 22px;
+                                margin-top: 33px;
+                                line-height: 1.4;
+                                .sale {
+                                    color: #000;
+                                    font-size: 96px;
+                                }
+                            }
+                        }
+                        a {
+                            font-family: "Fira Sans";
+                            text-transform: uppercase;
+                            margin-top: 20px;
+                            &:hover {
+                                color: @main-color;
+                                .transit(all, .5s);
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom {
+                display: flex;
+                margin: 46px -40px;
+                .featured-item {
+                    position: relative;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    img {
+                        padding: 0 25px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        &:hover {
+                            cursor: pointer;
+                            .transform(scale(1.1));
+                            .transit(all ,.5s);
+                        }
+                    }
+                    .item-content {
+                        position: absolute;
+                        text-align: center;
+                        left: 50%;
+                        .transform(translateX(-50%));
+                        bottom: 5.6%;
+                        letter-spacing: 0.07em;
+                        line-height: 2;
+                        .description {
+                            font-family: "Fira Sans";
+                            width: 300px;
+                            font-size: 24px;
+                        }
+                        .price {
+                            color: @main-color;
+                            font-size: 24px;
+                            text-transform: uppercase;
+                        }
+                        .title {
+                            font-family: "Fira Sans";
+                            position: absolute;
+                            color: #555;
+                            top: -357px;
+                            left: -361px;
+                            text-align: left;
+                            line-height: 1.2;
+                            span {
+                                font-family: "Cormorant";
+                                color: #000;
+                                font-size: 48px;
+                                font-weight: bold;
+                                letter-spacing: 0.05em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-products {
+            .featured-heading {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-left: -15px;
+                margin-right: -4px;
+                margin-top: 115px;
+                margin-bottom: 47px;
+                .title {
+                    font-size: 56px;
+                    font-weight: bold;
+                }
+                .view-more-btn {
+                    margin-top: 41px;
+                    font-family: "Fira Sans";
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 14px;
+                    vertical-align: bottom;
+                    letter-spacing: 0.16em;
+                    i {
+                        margin-left: 10px;
+                        color: @main-color;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        color: @main-color;
+                        .transit(all, .5s);
+                    }
+                }
+            }
+            .featured-body {
+                .featured-products {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -30px;
+                    .item-info {
+                        .col(25%);
+                        .picture-info {
+                            position: relative;
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 100%;
+                            &:hover {
+                                cursor: pointer;
+                                .prev-arrow {
+                                    i {
+                                        display: initial;
+                                        animation: show .7s;
+                                    }
+                                }
+                                .info-btn {
+                                    button {
+                                        display: initial;
+                                        animation: show .7s;
+                                    }
+                                }
+                            }
+                            .prev-arrow {
+                                position: absolute;
+                                display: flex;
+                                width: 93%;
+                                justify-content: space-between;
+                                margin: 0 10px;
+                                top: 39.2%;
+                                i {
+                                    display: none;
+                                    &:hover {
+                                        color: @main-color;
+                                        .transit(all ,.5s);
+                                    }
+                                }
+                            }
+                            .info-btn {
+                                position: absolute;
+                                box-sizing: border-box;
+                                overflow: hidden;
+                                bottom: 15%;
+                                button {
+                                    display: none;
+                                    border: none;
+                                    margin: 0 -1.2px;
+                                    &:hover {
+                                        cursor: pointer;
+                                        opacity: .8;
+                                        .transit(all, .5s);
+                                    }
+                                }
+                                .add-to-cart {
+                                    font-family: "Fira Sans";
+                                    text-transform: uppercase;
+                                    color: @text-white-color;
+                                    background-color: @main-color;
+                                    width: 147px;
+                                    height: 40px;
+                                    font-weight: bold;
+                                    letter-spacing: 0.1em;
+                                    text-align: center;
+                                }
+                                .reaction {
+                                    color: @text-white-color;
+                                    background-color: @common-color;
+                                    width: 40px;
+                                    height: 40px;
+                                    vertical-align: bottom;
+                                }
+                            }
+                            .info-title {
+                                text-align: center;
+                                margin-top: 12px;
+                                .name {
+                                    font-family: "Fira Sans";
+                                    font-weight: bold;
+                                    font-size: 15px;
+                                }
+                                .price {
+                                    color: @main-color;
+                                    margin-top: 7px;
+                                    letter-spacing: 0.1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.blog {
+    position: relative;
+    background-image: url(../img/blog_bg.jpg);
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 767px;
+    margin-top: 107px;
+    &-heading {
+        position: absolute;
+        left: 50%;
+        .transform(translateX(-50%));
+        font-size: 55px;
+        font-weight: bold;
+        top: -5.2%;
+        letter-spacing: 0.01em;
+    }
+    &-body {
+        margin: 0 -15px;
+        padding: 96px 0 15px;
+        .blog-body-item {
+            .col(33.333333%);
+            &-inner {
+                position: relative;
+                background-color: @text-white-color;
+                height: 460px;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                .item-content {
+                    box-sizing: border-box;
+                    margin: 23px 30px;
+                    .date {
+                        font-family: "Fira Sans";
+                        color: @summary;
+                        font-size: 14px;
+                        letter-spacing: 0.15em;
+                    }
+                    .description {
+                        margin-top: 24px;
+                        font-size: 24px;
+                        padding-bottom: 48px;
+                        font-weight: bold;
+                        letter-spacing: 0.05em;
+                        line-height: 1.4;
+                        &:hover {
+                            cursor: pointer;
+                            color: @main-color;
+                            .transit(all ,.5s);
+                        }
+                    }
+                    .update {
+                        display: flex;
+                        position: absolute;
+                        bottom: 0;
+                        padding: 20px 0;
+                        border-top: 1px solid @summary;
+                        width: 80%;
+                        i {
+                            color: #92c5d9;
+                            font-size: 12px;
+                            margin-left: 4px;
+                            margin-right: 6px;
+                        }
+                        .views {
+                            margin-right: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-footer {
+        position: absolute;
+        left: 50%;
+        .transform(translateX(-50%));
+        .line {
+            margin-top: 50px;
+            display: block;
+            height: 16px;
+            width: 143px;
+            z-index: 1;
+            background-color: @text-white-color;
+        }
+        .title {
+            margin-left: 17px;
+            margin-top: -33px;
+            font-size: 25px;
+            z-index: 10;
+            a {
+                &:hover {
+                    color: @main-color;
+                    .transit(all, .5s);
+                }
+            }
+        }
+    }
+}
+.brand {
+    height: 200px;
+    &-pic {
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+}
